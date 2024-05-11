@@ -1,0 +1,25 @@
+{
+  "name": "zoglin",
+  "displayName": "Zoglin",
+  "description": "Syntax highlighting for the zoglin datapack preprocessor",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "zoglin",
+      "aliases": ["Zoglin", "zoglin"],
+      "extensions": [".zog"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "zoglin",
+      "scopeName": "source.zoglin",
+      "path": "./syntaxes/zoglin.tmLanguage.json"
+    }]
+  }
+}
