@@ -38,7 +38,7 @@
 				},
 				{
 					"name": "storage.type.zoglin",
-					"match": "\\b(namespace|module|fn|res)\\b"
+					"match": "\\b(namespace|module|fn|res|asset)\\b"
 				}
 			]
 		},
