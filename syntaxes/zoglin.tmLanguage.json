@@ -43,8 +43,28 @@
 			]
 		},
 		"commands": {
-			"name": "command.zoglin",
-			"match": "^\\s*(advancement|attribute|bossbar|clear|clone|damage|data|datapack|difficulty|effect|enchant|execute|experience|fill|fillbiome|forceload|function|gamemode|gamerule|give|item|kill|loot|particle|place|playsound|random|recipe|reload|ride|say|schedule|scoreboard|setblock|setworldspawn|spawnpoint|spectate|spreadplayers|stopsound|summon|tag|team|teleport|tellraw|time|title|tp|trigger|weather|worldborder|xp|/\\s*)\\b.*"
+			"patterns": [
+				{
+					"begin": "^(?=\\s*(advancement|attribute|bossbar|clear|clone|damage|data|datapack|difficulty|effect|enchant|execute|experience|fill|fillbiome|forceload|function|gamemode|gamerule|give|item|kill|loot|particle|place|playsound|random|recipe|reload|ride|say|schedule|scoreboard|setblock|setworldspawn|spawnpoint|spectate|spreadplayers|stopsound|summon|tag|team|teleport|tellraw|time|title|tp|trigger|weather|worldborder|xp)\\b)",
+					"end": "\\n",
+					"contentName": "meta.embedded.command.mcfunction",
+					"patterns": [
+						{
+							"include": "source.mcfunction"
+						}
+					]
+				},
+				{
+					"begin": "^\\s*/",
+					"end": "\\n",
+					"contentName": "meta.embedded.command.mcfunction",
+					"patterns": [
+						{
+							"include": "source.mcfunction"
+						}
+					]
+				}
+			]
 		},
 		"numbers": {
 			"name": "constant.numeric.zoglin",
